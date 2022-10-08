@@ -11,17 +11,17 @@
 ## 웹 어댑터의 책임
 
 1. HTTP 요청을 자바객체로 매핑
-  - RequestBody, RequestParam
+    - RequestBody, RequestParam
 2. 권한검사
-  - Security, Intercepter
+    - Security, Intercepter
 3. 입력 유효성 검증
-  - Valid
-  - 입력모델을 유스케이스모델로 변환이 가능함을 검증
+    - Valid
+    - 입력모델을 유스케이스모델로 변환이 가능함을 검증
 4. 입력을 유스케이스의 입력모델로 매핑
-  - RequestParam -> UseCaseCommand
+    - RequestParam -> UseCaseCommand
 5. 유스케이스 호출
 6. 유스케이스의 출력을 HTTP로 매핑
-  - 발생한 Exception, 응답을 HTTP응답으로 매핑
+    - 발생한 Exception, 응답을 HTTP응답으로 매핑
 7. HTTP응답을 반환
 
 - 웹 어댑터의 책임이 많다. 하지만 어쩔 수 없다.
