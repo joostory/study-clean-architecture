@@ -174,7 +174,7 @@ package buckpal.application.service
 class GetAccountBalanceService(
   private loadAccountPort: LoadAccountPort
 ): GetAccountBalanceQuery {
-  override fun getAccountBalance(accountId: AccountId) {
+  override fun getAccountBalance(accountId: AccountId): Money {
     return localAccountPort.loadAccount(accountId, LcoalDateTime.now()).calculateBalance()
   }
 }
